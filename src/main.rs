@@ -134,7 +134,10 @@ async fn main() -> Result<()> {
         init_database(config.database_path()).with_context(|| "Failed to initialize database")?;
 
     // Initialize HTTP client
-    let client = reqwest::Client::new();
+    let client = reqwest::Client::builder()
+        .timeout(Duration::from_secs(30))
+        .build()
+        .with_context(|| "Failed to create HTTP client")?;
 
     if args.dry_run {
         info!("Running in DRY RUN mode - no data will be sent to API or recorded in database");
