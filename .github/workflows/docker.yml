@@ -1,5 +1,8 @@
 on:
   push:
+  pull_request:
+    paths:
+      - Dockerfile
   schedule:
     - cron: "30 6 * * 6"
 
