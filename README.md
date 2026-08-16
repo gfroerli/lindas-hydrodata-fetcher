@@ -84,6 +84,6 @@ Additionally, you should mount a directory for the database (as configured in th
 
 ## License
 
-Copyright © 2025 Coredump Hackerspace.
+Copyright © 2025-2026 Coredump Hackerspace.
 
 Licensed under the AGPLv3 or later, see `LICENSE.md`.
